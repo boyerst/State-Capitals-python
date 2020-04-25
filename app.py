@@ -8,6 +8,7 @@ for state in states:
   state['correct'] = 0
 
 
+
 game_init = True
 game_play = False
 game_replay = False
@@ -36,11 +37,13 @@ while game_init:
         print("Way to go!")
         correct += 1
         state['correct'] += 1
+        print(f"You have guessed {state['name']} correctly {state['correct']} times")
         print(f"Your Score: {correct}/{index + 1}")
       else: 
         print(f"Hit the books! The correct answer is {state['capital']}")
         incorrect += 1
         state['incorrect'] += 1
+        print(f"You have guessed {state['name']} incorrectly {state['incorrect']} times")
         print(f"Your Score: {correct}/{index + 1}")
     print(f"That's all 50 states! Your final score is {correct}/{index + 1}")
     game_play = False
